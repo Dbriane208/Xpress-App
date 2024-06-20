@@ -13,7 +13,16 @@
         android:theme="@style/Theme.XpressApp"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".admin.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customer.CustomerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".employee.EmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
