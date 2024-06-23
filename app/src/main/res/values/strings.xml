@@ -1,5 +1,24 @@
 <resources>
-    <string name="app_name">Xpress App</string>
+    <string name="app_name">Dairy Farm App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="regText">Let\'s Register</string>
+    <string name="regDesc">Already have an account? Login.</string>
+    <string name="fname">First name</string>
+    <string name="lname">Username</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="register">Register</string>
+    <string name="loginText">Let\'s Login</string>
+    <string name="login">Don\'t have an account? Register.</string>
+    <string name="forgotPass">Forgot Password?</string>
+    <string name="txtLogin">Login</string>
+    <string name="emailPrompt">Enter your email :</string>
+    <string name="passPrompt">Enter New Password :</string>
+    <string name="changePass">Change Password</string>
+    <string name="update">Change Your Password</string>
+    <string name="asEmployee">Employee</string>
+    <string name="loginAs">Login as:</string>
+    <string name="asAdmin">Admin</string>
+    <string name="asCustomer">Customer</string>
 </resources>
