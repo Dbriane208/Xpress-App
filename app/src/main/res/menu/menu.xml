@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bookingFragment"
+        android:title="@string/schedule"
+        android:icon="@drawable/schedule"/>
+
+    <item
+        android:id="@+id/allBookingsFragment"
+        android:title="@string/Bookings"
+        android:icon="@drawable/ic_calendar"/>
+
+    <item
+        android:id="@+id/invoiceFragment"
+        android:title="@string/pay"
+        android:icon="@drawable/payment"/>
+
+</menu>

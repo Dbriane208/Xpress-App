@@ -38,7 +38,7 @@ public class RegisterFragment extends Fragment {
         //Navigating to the Login Fragment
        binding.regToLogin.setOnClickListener(view1 -> {
             NavController navController = Navigation.findNavController(view1);
-            navController.navigate(R.id.action_forgotPasswordFragment_to_loginFragment);
+            navController.navigate(R.id.action_registerFragment_to_loginFragment);
         });
 
         // Registering a new user
@@ -62,7 +62,6 @@ public class RegisterFragment extends Fragment {
                 }else{
                     Snackbar.make(requireView(),"Oops!! Please Enter a valid Email!",Snackbar.LENGTH_LONG).show();
                 }
-
             }
         });
 
