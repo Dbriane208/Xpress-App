@@ -60,6 +60,17 @@
     <string name="batteryApp">Battery Appointment</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
+    <string name="text">text</string>
+    <string name="App">All Appointments</string>
+    <string name="items">Items Used</string>
+    <string name="checkout">Check Out</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="amount">Ksh 5000</string>
+    <string name="completedB">Completed Bookings</string>
+    <string name="customerB">All Bookings</string>
+    <string name="regiterE">Employee Registration</string>
+    <string name="reports">Reports</string>
+    <string name="taskA">Task Assignment</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>

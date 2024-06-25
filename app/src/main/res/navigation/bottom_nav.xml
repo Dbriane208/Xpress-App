@@ -6,11 +6,6 @@
     app:startDestination="@id/bookingFragment">
 
     <fragment
-        android:id="@+id/allBookingsFragment"
-        android:name="daniel.brian.xpressapp.customer.fragments.AllBookingsFragment"
-        android:label="fragment_all_bookings"
-        tools:layout="@layout/fragment_all_bookings" />
-    <fragment
         android:id="@+id/invoiceFragment"
         android:name="daniel.brian.xpressapp.customer.fragments.InvoiceFragment"
         android:label="fragment_invoice"

@@ -7,11 +7,6 @@
         android:icon="@drawable/schedule"/>
 
     <item
-        android:id="@+id/allBookingsFragment"
-        android:title="@string/Bookings"
-        android:icon="@drawable/ic_calendar"/>
-
-    <item
         android:id="@+id/invoiceFragment"
         android:title="@string/pay"
         android:icon="@drawable/payment"/>

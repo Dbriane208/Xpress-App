@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav"
+    app:startDestination="@id/adminFragment">
+
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="daniel.brian.xpressapp.admin.fragments.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_adminFragment_to_taskAssignmentFragment"
+            app:destination="@id/taskAssignmentFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_customerBookingsFragment"
+            app:destination="@id/customerBookingsFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_completedBookingsFragment"
+            app:destination="@id/completedBookingsFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_registerEmployeesFragment"
+            app:destination="@id/registerEmployeesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/completedBookingsFragment"
+        android:name="daniel.brian.xpressapp.admin.fragments.CompletedBookingsFragment"
+        android:label="fragment_completed_bookings"
+        tools:layout="@layout/fragment_completed_bookings" />
+    <fragment
+        android:id="@+id/customerBookingsFragment"
+        android:name="daniel.brian.xpressapp.admin.fragments.CustomerBookingsFragment"
+        android:label="fragment_customer_bookings"
+        tools:layout="@layout/fragment_customer_bookings" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="daniel.brian.xpressapp.admin.fragments.ReportsFragment"
+        android:label="fragment_reports"
+        tools:layout="@layout/fragment_reports" />
+    <fragment
+        android:id="@+id/taskAssignmentFragment"
+        android:name="daniel.brian.xpressapp.admin.fragments.TaskAssignmentFragment"
+        android:label="fragment_task_assignment"
+        tools:layout="@layout/fragment_task_assignment" />
+    <fragment
+        android:id="@+id/registerEmployeesFragment"
+        android:name="daniel.brian.xpressapp.admin.fragments.RegisterEmployeesFragment"
+        android:label="fragment_register_employees"
+        tools:layout="@layout/fragment_register_employees" />
+</navigation>

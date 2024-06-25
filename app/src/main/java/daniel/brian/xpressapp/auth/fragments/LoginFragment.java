@@ -18,6 +18,7 @@ import java.util.Objects;
 import daniel.brian.xpressapp.R;
 import daniel.brian.xpressapp.admin.AdminActivity;
 import daniel.brian.xpressapp.auth.db.AuthenticationDB;
+import daniel.brian.xpressapp.customer.CustomerActivity;
 import daniel.brian.xpressapp.databinding.FragmentLoginBinding;
 import daniel.brian.xpressapp.employee.EmployeeActivity;
 
@@ -68,12 +69,12 @@ public class LoginFragment extends Fragment {
                         Snackbar.make(requireView(),"Oops!! Check the right box!",Snackbar.LENGTH_LONG).show();
                     }
                 }else{
-                    if(checkEmployee && !checkAdmin && !checkCustomer){
+                    if(!checkEmployee && !checkAdmin && checkCustomer){
                         binding.asAdmin.isTemporarilyDetached();
                         if(userEmail.contains("@gmail.com") || userEmail.contains("@yahoo.com")){
                             boolean loginUser = authDB.loginUser(userEmail,userPassword);
                             if(loginUser){
-                                Intent intent = new Intent(this.getContext(), EmployeeActivity.class);
+                                Intent intent = new Intent(this.getContext(), CustomerActivity.class);
                                 startActivity(intent);
                                 Snackbar.make(requireView(),"Login Successful!",Snackbar.LENGTH_LONG).show();
                             }else{
