@@ -19,10 +19,10 @@ public class BookingDB extends SQLiteOpenHelper {
                 "service Text not null,"+
                 "branch Text not null,"+
                 "firstname Text not null,"+
-                "phone Text not null unique,"+
+                "phone Text not null PRIMARY KEY,"+
                 "time Text not null,"+
                 "date Text not null,"+
-                "carReg Text not null," +
+                "carReg Text not null unique," +
                 "carModel Text not null,"+
                 "constraint appointment unique (firstname,phone))"
         );

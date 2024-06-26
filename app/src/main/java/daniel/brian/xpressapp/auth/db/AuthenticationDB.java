@@ -18,7 +18,7 @@ public class AuthenticationDB extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create Table users(" +
                 "username Text not null," +
-                "email Text not null unique," +
+                "email Text not null PRIMARY KEY," +
                 "password Text not null, " +
                 "constraint username unique (username,email))");
     }

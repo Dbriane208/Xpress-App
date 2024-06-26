@@ -71,6 +71,10 @@
     <string name="regiterE">Employee Registration</string>
     <string name="reports">Reports</string>
     <string name="taskA">Task Assignment</string>
+    <string name="EmployeeReg">Employee Registration</string>
+    <string name="task">Task Assignment</string>
+    <string name="name">Assigned Employee</string>
+    <string name="assgT">Assign Task</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>
