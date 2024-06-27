@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:layout_margin="10dp">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         app:cardCornerRadius="10dp"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp">
 
@@ -35,12 +35,12 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="Service :      "
+                    android:text="Employee :      "
                     android:textColor="@color/black"
                     />
 
                 <TextView
-                    android:id="@+id/service"
+                    android:id="@+id/assignedName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -66,12 +66,12 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="Branch :        "
+                    android:text="Car Reg :        "
                     android:textColor="@color/black"
                     />
 
                 <TextView
-                    android:id="@+id/branch"
+                    android:id="@+id/assignedCarReg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -97,11 +97,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="Firstname:           "
+                    android:text="Car Model:      "
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/firstname"
+                    android:id="@+id/assignedCarModel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -127,11 +127,11 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="Phone :         "
+                    android:text="Time :         "
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/phone"
+                    android:id="@+id/assignedTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -157,108 +157,16 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
-                    android:text="Time :        "
+                    android:text="Service :        "
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/time"
+                    android:id="@+id/assignedService"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="5dp"
                     android:text="@string/time"
-                    android:textColor="@color/black"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layout6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout5">
-
-                <TextView
-                    android:id="@+id/text6"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Date :         "
-                    android:textColor="@color/black"
-                    />
-
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="5dp"
-                    android:text="@string/date"
-                    android:textColor="@color/black"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layout7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout6">
-
-                <TextView
-                    android:id="@+id/text7"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Car Reg :         "
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:id="@+id/carReg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="5dp"
-                    android:text="@string/carReg"
-                    android:textColor="@color/black"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layout8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layout7">
-
-                <TextView
-                    android:id="@+id/text8"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_weight="1"
-                    android:text="Car Model :       "
-                    android:textColor="@color/black"
-                    />
-
-                <TextView
-                    android:id="@+id/carModel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="5dp"
-                    android:text="@string/carModel"
                     android:textColor="@color/black"/>
 
             </LinearLayout>

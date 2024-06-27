@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".employee.fragments.CompletionTaskFragment">
+    tools:context=".admin.fragments.CustomerInvoiceFragment">
 
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@color/g_blue"
-        android:title="@string/completedT"
+        android:title="@string/invoice"
         android:titleMarginStart="45dp"
         android:titleTextAppearance="@style/h4"
         android:titleTextColor="@color/g_white"

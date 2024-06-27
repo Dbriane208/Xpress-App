@@ -2,6 +2,7 @@ package daniel.brian.xpressapp.customer.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -55,5 +56,10 @@ public class BookingDB extends SQLiteOpenHelper {
 
         long result = db.insert("Appointments",null,contentValues);
         return result != -1;
+    }
+
+    public Cursor getAllBookings(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("select * from Appointments",null);
     }
 }

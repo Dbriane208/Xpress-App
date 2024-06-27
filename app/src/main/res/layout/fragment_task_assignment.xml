@@ -88,17 +88,17 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:labelFor="@+id/employeeCarModel"
-            android:text="@string/name"/>
+            android:text="@string/carModel"/>
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/employeeCarModel"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/name"
+            android:hint="@string/carModel"
             android:textColor="@color/black"
             android:textColorHighlight="#32addf"
             android:textColorHint="#546E7A"
-            android:label="@string/name"
+            android:label="@string/carModel"
             tools:ignore="VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>

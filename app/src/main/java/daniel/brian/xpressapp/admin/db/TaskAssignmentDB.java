@@ -21,7 +21,6 @@ public class TaskAssignmentDB extends SQLiteOpenHelper {
                 "time Text not null,"+
                 "service Text not null)"
         );
-
     }
 
     @Override
@@ -40,4 +39,5 @@ public class TaskAssignmentDB extends SQLiteOpenHelper {
         long result = db.insert("Tasks",null,contentValues);
         return  result != -1;
     }
+
 }

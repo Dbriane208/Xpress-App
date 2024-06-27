@@ -75,6 +75,10 @@
     <string name="task">Task Assignment</string>
     <string name="name">Assigned Employee</string>
     <string name="assgT">Assign Task</string>
+    <string name="assignedT">Assigned Tasks</string>
+    <string name="save">Save Task</string>
+    <string name="completedT">Completed Task</string>
+    <string name="invoice">Invoice</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>

@@ -17,8 +17,8 @@ public class EmployeeDB  extends SQLiteOpenHelper {
         db.execSQL("create Table Employees("+
                 "username Text not null,"+
                 "email Text not null PRIMARY KEY,"+
-                "phone not null unique,"+
-                "password not null,"+
+                "phone Text not null unique,"+
+                "password Text not null,"+
                 "constraint employee unique(email,phone))"
         );
 
@@ -40,4 +40,5 @@ public class EmployeeDB  extends SQLiteOpenHelper {
         long result = db.insert("Employees",null,contentValues);
         return result != -1;
     }
+
 }
