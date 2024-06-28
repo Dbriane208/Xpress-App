@@ -39,7 +39,7 @@ public class RegisterEmployeesFragment extends Fragment {
             String password = Objects.requireNonNull(binding.employeePassword.getText()).toString();
 
             if(name.isEmpty() || email.isEmpty() || phone.isEmpty() || password.isEmpty()){
-                if(phone.startsWith("07") || phone.startsWith("01") && phone.length() == 10) {
+                if(!phone.startsWith("07") || !phone.startsWith("01") && !(phone.length() == 10)) {
                     Snackbar.make(requireView(), "Please Enter valid phone number", Snackbar.LENGTH_SHORT).show();
                 }else {
                     Snackbar.make(requireView(), "Please enter all Fields", Snackbar.LENGTH_SHORT).show();

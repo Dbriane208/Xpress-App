@@ -2,6 +2,7 @@ package daniel.brian.xpressapp.admin.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -39,6 +40,18 @@ public class EmployeeDB  extends SQLiteOpenHelper {
 
         long result = db.insert("Employees",null,contentValues);
         return result != -1;
+    }
+
+    public boolean loginEmployee(String email,String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from Employees where email = ? and password = ?",new String[]{email,password});
+        return cursor.getCount() > 0;
+    }
+
+    public boolean checkEmployee(String name){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from Employees where username = ?",new String[]{name});
+        return cursor.getCount() > 0;
     }
 
 }

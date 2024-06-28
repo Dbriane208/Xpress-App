@@ -17,6 +17,7 @@ import java.util.Objects;
 
 import daniel.brian.xpressapp.R;
 import daniel.brian.xpressapp.admin.AdminActivity;
+import daniel.brian.xpressapp.admin.db.EmployeeDB;
 import daniel.brian.xpressapp.auth.db.AuthenticationDB;
 import daniel.brian.xpressapp.customer.CustomerActivity;
 import daniel.brian.xpressapp.databinding.FragmentLoginBinding;
@@ -25,6 +26,7 @@ import daniel.brian.xpressapp.employee.EmployeeActivity;
 public class LoginFragment extends Fragment {
     FragmentLoginBinding binding;
     AuthenticationDB authDB;
+    EmployeeDB employeeDB;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
@@ -46,6 +48,7 @@ public class LoginFragment extends Fragment {
 
         // Declaring the database
         authDB = new AuthenticationDB(this.getContext());
+        employeeDB = new EmployeeDB(this.getContext());
 
         // Login a register user
         binding.btnLogin.setOnClickListener(view1 -> {
@@ -62,6 +65,7 @@ public class LoginFragment extends Fragment {
                 if(userEmail.matches("admin@auto.com") && userPassword.matches("admin@auto")){
                     if(checkAdmin && !checkEmployee && !checkCustomer){
                         binding.asEmployee.isTemporarilyDetached();
+                        binding.asCustomer.isTemporarilyDetached();
                         Intent intent = new Intent(this.getContext(), AdminActivity.class);
                         startActivity(intent);
                         Snackbar.make(requireView(),"Logging as Admin Successful!",Snackbar.LENGTH_LONG).show();
@@ -71,6 +75,7 @@ public class LoginFragment extends Fragment {
                 }else{
                     if(!checkEmployee && !checkAdmin && checkCustomer){
                         binding.asAdmin.isTemporarilyDetached();
+                        binding.asEmployee.isTemporarilyDetached();
                         if(userEmail.contains("@gmail.com") || userEmail.contains("@yahoo.com")){
                             boolean loginUser = authDB.loginUser(userEmail,userPassword);
                             if(loginUser){
@@ -85,6 +90,23 @@ public class LoginFragment extends Fragment {
                         }
                     }else{
                         Snackbar.make(requireView(),"Oops!! Check the right box!",Snackbar.LENGTH_LONG).show();
+                    }
+
+                    if(!checkCustomer && !checkAdmin && checkEmployee){
+                        binding.asAdmin.isTemporarilyDetached();
+                        binding.asCustomer.isTemporarilyDetached();
+                        if(userEmail.contains("@autocare.com")){
+                            boolean loginEmployee = employeeDB.loginEmployee(userEmail,userPassword);
+                            if(loginEmployee){
+                                Intent intent = new Intent(this.getContext(), EmployeeActivity.class);
+                                startActivity(intent);
+                                Snackbar.make(requireView(),"Login Successful!",Snackbar.LENGTH_LONG).show();
+                            }else{
+                                Snackbar.make(requireView(),"Employee not recognised",Snackbar.LENGTH_LONG).show();
+                            }
+                        }else{
+                            Snackbar.make(requireView(),"Oops!! Please Enter a valid Email!",Snackbar.LENGTH_LONG).show();
+                        }
                     }
                 }
             }

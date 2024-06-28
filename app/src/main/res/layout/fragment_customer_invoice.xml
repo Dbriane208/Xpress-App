@@ -31,15 +31,15 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:labelFor="@+id/employeeName"
-            android:text="@string/name" />
+            android:labelFor="@+id/invoiceOwner"
+            android:text="@string/lname" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/completedTaskName"
+            android:id="@+id/invoiceOwner"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/name"
-            android:label="@string/name"
+            android:hint="@string/lname"
+            android:label="@string/lname"
             android:textColor="@color/black"
             android:textColorHighlight="#32addf"
             android:textColorHint="#546E7A"
@@ -59,15 +59,15 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:labelFor="@+id/employeeCarReg"
-            android:text="@string/carReg" />
+            android:labelFor="@+id/invoicePhone"
+            android:text="@string/phone" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/completedTaskCarReg"
+            android:id="@+id/invoicePhone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/carReg"
-            android:label="@string/carReg"
+            android:hint="@string/phone"
+            android:label="@string/phone"
             android:textColor="@color/black"
             android:textColorHighlight="#32addf"
             android:textColorHint="#546E7A"
@@ -87,15 +87,15 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:labelFor="@+id/employeeCarModel"
-            android:text="@string/carModel" />
+            android:labelFor="@+id/invoiceCarReg"
+            android:text="@string/carReg" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/completedTaskCarModel"
+            android:id="@+id/invoiceCarReg"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/carModel"
-            android:label="@string/carModel"
+            android:hint="@string/carReg"
+            android:label="@string/carReg"
             android:textColor="@color/black"
             android:textColorHighlight="#32addf"
             android:textColorHint="#546E7A"
@@ -115,15 +115,15 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:labelFor="@+id/employeeTime"
-            android:text="@string/item" />
+            android:labelFor="@+id/invoiceCarModel"
+            android:text="@string/carModel" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/productUsed"
+            android:id="@+id/invoiceCarModel"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/item"
-            android:label="@string/item"
+            android:hint="@string/carModel"
+            android:label="@string/carModel"
             android:textColor="@color/black"
             android:textColorHighlight="#32addf"
             android:textColorHint="#546E7A"
@@ -143,11 +143,11 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:labelFor="@+id/employeeService"
+            android:labelFor="@+id/invoiceServiceDone"
             android:text="@string/service" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/completedService"
+            android:id="@+id/invoiceServiceDone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/service"
@@ -171,11 +171,67 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:labelFor="@+id/employeeService"
+            android:labelFor="@+id/invoiceDate"
+            android:text="@string/date" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/invoiceDate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/date"
+            android:label="@string/date"
+            android:textColor="@color/black"
+            android:textColorHighlight="#32addf"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintTop_toBottomOf="@id/guideline3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:labelFor="@+id/invoiceServedBy"
+            android:text="@string/servedBy" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/invoiceServedBy"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/servedBy"
+            android:label="@string/servedBy"
+            android:textColor="@color/black"
+            android:textColorHighlight="#32addf"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintTop_toBottomOf="@id/guideline4">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:labelFor="@+id/invoiceTotalCost"
             android:text="@string/total_amount" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/completedTotalCost"
+            android:id="@+id/invoiceTotalCost"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="@string/total_amount"
@@ -188,16 +244,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
-        android:id="@+id/completedTask"
+        android:id="@+id/invoiceSave"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:background="@drawable/blue_background"
-        android:text="@string/save"
+        android:text="@string/saveI"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
-        app:layout_constraintTop_toBottomOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/guideline5"
         tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -219,48 +275,62 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.11" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.21" />
+        app:layout_constraintGuide_percent="0.18" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomCarReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.31" />
+        app:layout_constraintGuide_percent="0.26" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomCarModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.41" />
+        app:layout_constraintGuide_percent="0.34" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.51" />
+        app:layout_constraintGuide_percent="0.42" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottomService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.61" />
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.71" />
+        app:layout_constraintGuide_percent="0.58" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.64" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

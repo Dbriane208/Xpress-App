@@ -79,6 +79,8 @@
     <string name="save">Save Task</string>
     <string name="completedT">Completed Task</string>
     <string name="invoice">Invoice</string>
+    <string name="servedBy">Served By</string>
+    <string name="saveI">Save Invoice</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>

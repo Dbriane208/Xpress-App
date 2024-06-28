@@ -34,6 +34,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:text="Served by :      "
                     android:textColor="@color/black"
@@ -65,6 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:text="Car Reg :        "
                     android:textColor="@color/black"
@@ -96,6 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:text="Car Model:           "
                     android:textColor="@color/black"/>
@@ -126,6 +129,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:text="Product Used :         "
                     android:textColor="@color/black"/>
@@ -156,6 +160,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_marginStart="10dp"
+                    android:textStyle="bold"
                     android:layout_weight="1"
                     android:text="Service Done :        "
                     android:textColor="@color/black"/>
@@ -185,6 +190,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textStyle="bold"
                     android:layout_marginStart="10dp"
                     android:layout_weight="1"
                     android:text="Amount :         "

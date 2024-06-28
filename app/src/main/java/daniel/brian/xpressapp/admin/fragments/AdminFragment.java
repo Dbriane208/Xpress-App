@@ -52,6 +52,12 @@ public class AdminFragment extends Fragment {
             navController.navigate(R.id.action_adminFragment_to_taskAssignmentFragment);
         });
 
+        // invoice
+        binding.customerInvoice.setOnClickListener(v -> {
+            NavController controller = Navigation.findNavController(v);
+            controller.navigate(R.id.action_adminFragment_to_customerInvoiceFragment);
+        });
+
         return binding.getRoot();
     }
 }
