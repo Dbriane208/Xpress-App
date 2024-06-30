@@ -41,5 +41,9 @@ public class TaskAssignmentDB extends SQLiteOpenHelper {
         return  result != -1;
     }
 
+    public Cursor getAllTasks(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("select * from Tasks",null);
+    }
 
 }

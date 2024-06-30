@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/employee_nav"
+    app:startDestination="@id/employeeDashboardFragment">
+
+    <fragment
+        android:id="@+id/employeeDashboardFragment"
+        android:name="daniel.brian.xpressapp.employee.fragments.EmployeeDashboardFragment"
+        android:label="fragment_employee_dashboard"
+        tools:layout="@layout/fragment_employee_dashboard" >
+        <action
+            android:id="@+id/action_employeeDashboardFragment_to_completionTaskFragment"
+            app:destination="@id/completionTaskFragment" />
+        <action
+            android:id="@+id/action_employeeDashboardFragment_to_assignedTasksFragment"
+            app:destination="@id/assignedTasksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignedTasksFragment"
+        android:name="daniel.brian.xpressapp.employee.fragments.AssignedTasksFragment"
+        android:label="fragment_assigned_tasks"
+        tools:layout="@layout/fragment_assigned_tasks" />
+    <fragment
+        android:id="@+id/completionTaskFragment"
+        android:name="daniel.brian.xpressapp.employee.fragments.CompletionTaskFragment"
+        android:label="fragment_completion_task"
+        tools:layout="@layout/fragment_completion_task" />
+</navigation>

@@ -81,6 +81,7 @@
     <string name="invoice">Invoice</string>
     <string name="servedBy">Served By</string>
     <string name="saveI">Save Invoice</string>
+    <string name="employee">Employee Dashboard</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>
