@@ -54,4 +54,17 @@ public class AuthenticationDB extends SQLiteOpenHelper {
         long forgotPass = db.update("users",contentValues,"email = ?",new String[]{email});
         return forgotPass != -1;
     }
+
+    public int getAllUsers(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor =  db.rawQuery("select count(*) from users",null);
+
+        int count = 0;
+        if(cursor.moveToFirst()){
+            count = cursor.getInt(0);
+        }
+
+        cursor.close();
+        return count;
+    }
 }

@@ -53,7 +53,7 @@ public class CustomerBookingsFragment extends Fragment {
     }
 
     private void displayData() {
-        Cursor cursor = db.getAllBookings();
+        Cursor cursor = db.getAllAppointments();
         if(cursor.getCount() == 0){
             Snackbar.make(requireView(),"No Available Bookings",Snackbar.LENGTH_SHORT).show();
         }else{

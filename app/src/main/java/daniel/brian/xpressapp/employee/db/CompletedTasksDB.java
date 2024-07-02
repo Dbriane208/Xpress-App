@@ -48,4 +48,35 @@ public class CompletedTasksDB extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.rawQuery("select * from completedTasks",null);
     }
+
+    public int getAllBookingsCount() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM completedTasks", null);
+        int count = 0;
+
+        if (cursor.moveToFirst()) {
+            count = cursor.getInt(0);
+        }
+
+        cursor.close();
+        return count;
+    }
+
+    public int getTotalCost(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select sum(totalAmount) from completedTasks",null);
+
+        int cost = 0;
+        if(cursor != null){
+            try{
+                if(cursor.moveToNext()){
+                    cost = cursor.getInt(0);
+                }
+            }
+            finally {
+                cursor.close();
+            }
+        }
+        return cost;
+    }
 }

@@ -58,8 +58,22 @@ public class BookingDB extends SQLiteOpenHelper {
         return result != -1;
     }
 
-    public Cursor getAllBookings(){
+    public Cursor getAllAppointments(){
         SQLiteDatabase db = this.getWritableDatabase();
         return db.rawQuery("select * from Appointments",null);
+    }
+
+    public int getAllAppointmentsCount(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select count(*) from Appointments",null);
+
+        int count = 0;
+
+        if(cursor.moveToFirst()){
+            count = cursor.getInt(0);
+        }
+
+        cursor.close();
+        return count;
     }
 }

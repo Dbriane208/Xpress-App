@@ -82,6 +82,12 @@
     <string name="servedBy">Served By</string>
     <string name="saveI">Save Invoice</string>
     <string name="employee">Employee Dashboard</string>
+    <string name="reportsD">Reports Dashboard</string>
+    <string name="_1">1</string>
+    <string name="total_employee">No. of Employees</string>
+    <string name="total_revenue">Total Revenue</string>
+    <string name="completedTB">Total Bookings</string>
+    <string name="registereduser">Registered Users</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>

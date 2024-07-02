@@ -18,11 +18,13 @@ import java.util.ArrayList;
 import daniel.brian.xpressapp.admin.db.InvoiceDB;
 import daniel.brian.xpressapp.customer.adapters.InvoiceAdapter;
 import daniel.brian.xpressapp.databinding.FragmentInvoiceBinding;
+import daniel.brian.xpressapp.employee.db.CompletedTasksDB;
 
 public class InvoiceFragment extends Fragment {
     FragmentInvoiceBinding binding;
     RecyclerView recyclerView;
     InvoiceDB db;
+    CompletedTasksDB completedTasksDB;
     InvoiceAdapter invoiceAdapter;
     ArrayList<String> owner,phone,carReg,carModel,serviceDone,date,servedBy,totalAmount;
 
@@ -34,6 +36,7 @@ public class InvoiceFragment extends Fragment {
         binding = FragmentInvoiceBinding.inflate(getLayoutInflater());
 
         db = new InvoiceDB(this.getContext());
+        completedTasksDB = new CompletedTasksDB(this.getContext());
         owner = new ArrayList<>();
         phone = new ArrayList<>();
         carReg = new ArrayList<>();
@@ -42,6 +45,9 @@ public class InvoiceFragment extends Fragment {
         date = new ArrayList<>();
         servedBy = new ArrayList<>();
         totalAmount = new ArrayList<>();
+
+        int total = completedTasksDB.getTotalCost();
+        binding.totalAmount.setText("Ksh " + total);
 
         recyclerView = binding.invoiceRV;
         invoiceAdapter = new InvoiceAdapter(this.getContext(),owner,phone,carReg,carModel,serviceDone,date,servedBy,totalAmount);

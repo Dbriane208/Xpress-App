@@ -54,4 +54,18 @@ public class EmployeeDB  extends SQLiteOpenHelper {
         return cursor.getCount() > 0;
     }
 
+    public int getAllEmployees(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select count(*) from Employees",null);
+
+        int count = 0;
+
+        if(cursor.moveToFirst()){
+            count = cursor.getInt(0);
+        }
+
+        cursor.close();
+        return count;
+    }
+
 }

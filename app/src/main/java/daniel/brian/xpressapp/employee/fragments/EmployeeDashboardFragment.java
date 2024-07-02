@@ -30,8 +30,8 @@ public class EmployeeDashboardFragment extends Fragment {
         });
 
         // navigate to assigned task
-        binding.assignedTask.setOnClickListener(v -> {
-            NavController navController = Navigation.findNavController(v);
+        binding.assignedTask.setOnClickListener(v1 -> {
+            NavController navController = Navigation.findNavController(v1);
             navController.navigate(R.id.action_employeeDashboardFragment_to_assignedTasksFragment);
         });
 

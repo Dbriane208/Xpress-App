@@ -25,9 +25,17 @@ android {
             )
         }
     }
+
+    buildTypes.forEach {
+        it.buildConfigField("String", "CONSUMER_KEY","\"QL7S1jYVxSZNZ8TrUAlImRVqiH3IEvV5p2Wd43P1EKke0ZkL\"" )
+        it.buildConfigField("String", "CONSUMER_SECRET", "\"iG66xMbrtE4rVpf2gO8OSbnq03nLjOkyGoj08zs4WPUGEwoxnxmq5pNEfgk45GcU\"")
+    }
+
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -50,4 +58,18 @@ dependencies {
 
     //loading button
     implementation("br.com.simplepass:loading-button-android:2.2.0")
+
+    // Mpesa-stk push
+    implementation ("com.jakewharton.timber:timber:5.0.1")
+
+    implementation("cn.pedant.sweetalert:library:1.3")
+
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.squareup.okio:okio:3.6.0")
 }
