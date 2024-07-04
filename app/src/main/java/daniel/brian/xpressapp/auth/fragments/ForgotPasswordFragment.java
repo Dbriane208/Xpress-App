@@ -48,7 +48,7 @@ public class ForgotPasswordFragment extends Fragment {
                     navController.navigate(R.id.action_forgotPasswordFragment_to_loginFragment);
                     Snackbar.make(requireView(),"Password Updated Successfully!",Snackbar.LENGTH_LONG).show();
                 }else{
-                    Snackbar.make(requireView(),"Password Updated Successfully!",Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(requireView(),"Password failed to update!",Snackbar.LENGTH_LONG).show();
                 }
             }
         });

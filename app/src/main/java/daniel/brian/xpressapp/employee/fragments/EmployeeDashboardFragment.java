@@ -35,6 +35,12 @@ public class EmployeeDashboardFragment extends Fragment {
             navController.navigate(R.id.action_employeeDashboardFragment_to_assignedTasksFragment);
         });
 
+        // navigate to change password
+        binding.changePasswordTask.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(v);
+            navController.navigate(R.id.action_employeeDashboardFragment_to_updatePasswordFragment);
+        });
+
         return binding.getRoot();
     }
 }

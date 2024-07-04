@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_employeeDashboardFragment_to_assignedTasksFragment"
             app:destination="@id/assignedTasksFragment" />
+        <action
+            android:id="@+id/action_employeeDashboardFragment_to_updatePasswordFragment"
+            app:destination="@id/updatePasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/assignedTasksFragment"
@@ -27,4 +30,9 @@
         android:name="daniel.brian.xpressapp.employee.fragments.CompletionTaskFragment"
         android:label="fragment_completion_task"
         tools:layout="@layout/fragment_completion_task" />
+    <fragment
+        android:id="@+id/updatePasswordFragment"
+        android:name="daniel.brian.xpressapp.employee.fragments.UpdatePasswordFragment"
+        android:label="fragment_update_password"
+        tools:layout="@layout/fragment_update_password" />
 </navigation>

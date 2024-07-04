@@ -69,7 +69,7 @@ public class CompletedTasksDB extends SQLiteOpenHelper {
         int cost = 0;
         if(cursor != null){
             try{
-                if(cursor.moveToNext()){
+                if(cursor.moveToFirst()){
                     cost = cursor.getInt(0);
                 }
             }

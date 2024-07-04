@@ -1,5 +1,6 @@
 package daniel.brian.xpressapp.customer.fragments;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,11 +15,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import daniel.brian.xpressapp.admin.db.InvoiceDB;
 import daniel.brian.xpressapp.customer.adapters.InvoiceAdapter;
 import daniel.brian.xpressapp.databinding.FragmentInvoiceBinding;
 import daniel.brian.xpressapp.employee.db.CompletedTasksDB;
+import daniel.brian.xpressapp.payments.MpesaPaymentActivity;
 
 public class InvoiceFragment extends Fragment {
     FragmentInvoiceBinding binding;
@@ -48,6 +51,15 @@ public class InvoiceFragment extends Fragment {
 
         int total = completedTasksDB.getTotalCost();
         binding.totalAmount.setText("Ksh " + total);
+
+        binding.checkOut.setOnClickListener(v -> {
+            String phoneNumber = Objects.requireNonNull(binding.phoneNumber.getText()).toString();
+
+            Intent intent = new Intent(this.getContext(), MpesaPaymentActivity.class);
+            intent.putExtra("price",total);
+            intent.putExtra("phone",phoneNumber);
+            startActivity(intent);
+        });
 
         recyclerView = binding.invoiceRV;
         invoiceAdapter = new InvoiceAdapter(this.getContext(),owner,phone,carReg,carModel,serviceDone,date,servedBy,totalAmount);

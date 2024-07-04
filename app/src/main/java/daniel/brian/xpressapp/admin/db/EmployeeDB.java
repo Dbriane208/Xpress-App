@@ -48,6 +48,12 @@ public class EmployeeDB  extends SQLiteOpenHelper {
         return cursor.getCount() > 0;
     }
 
+    public boolean updatePassword(String email,String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("select * from Employees where email = ? and password = ?",new String[]{email,password});
+        return cursor.getCount() >0;
+    }
+
     public boolean checkEmployee(String name){
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select * from Employees where username = ?",new String[]{name});

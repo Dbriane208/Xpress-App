@@ -88,6 +88,11 @@
     <string name="total_revenue">Total Revenue</string>
     <string name="completedTB">Total Bookings</string>
     <string name="registereduser">Registered Users</string>
+    <string name="payment">Check out</string>
+    <string name="phoneNo">Enter your Phnone No.</string>
+    <string name="confirmPayment">Confirm you entered the correct contact. Click Checkout if you\'re paying with Mpesa.</string>
+    <string name="cash">Paid by Cash.</string>
+    <string name="payO">Pay with Mpesa</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>

@@ -69,6 +69,48 @@
         app:cardElevation="5dp"
         app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
         app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
+        app:layout_constraintTop_toBottomOf="@id/guidelineBottomMilkProd"
+        app:layout_constraintBottom_toTopOf="@id/guidelineBottomHealth">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                style="@style/h3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_marginEnd="1dp"
+                android:text="@string/update"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/changePasswordTask"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/add_button"
+                app:tint="@color/g_blue"
+                tools:ignore="ImageContrastCheck" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintStart_toStartOf="@id/guidelineMrgStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineMrgEnd"
         app:layout_constraintTop_toTopOf="@id/guidelineBottomCowsList"
         app:layout_constraintBottom_toBottomOf="@id/guidelineBottomMilkProd">
 
