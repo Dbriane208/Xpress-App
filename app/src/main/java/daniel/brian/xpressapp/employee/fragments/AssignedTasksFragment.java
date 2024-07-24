@@ -44,7 +44,7 @@ public class AssignedTasksFragment extends Fragment {
         recyclerView = binding.assignedTasksRV;
         assignedTaskAdapter = new AssignedTaskAdapter(this.getContext(),employee,carReg,carModel,time,service);
         recyclerView.setAdapter(assignedTaskAdapter);
-        recyclerView.setLayoutManager(new GridLayoutManager(this.getContext(),2, LinearLayoutManager.VERTICAL,false));
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.VERTICAL,false));
         displayData();
 
         return binding.getRoot();
