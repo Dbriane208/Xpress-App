@@ -183,6 +183,7 @@
             android:layout_height="50dp"
             android:hint="@string/date"
             android:label="@string/date"
+            android:inputType="none"
             android:textColor="@color/black"
             android:textColorHighlight="#32addf"
             android:textColorHint="#546E7A"

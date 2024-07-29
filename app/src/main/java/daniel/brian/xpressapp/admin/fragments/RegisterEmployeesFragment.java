@@ -1,5 +1,7 @@
 package daniel.brian.xpressapp.admin.fragments;
 
+import static daniel.brian.xpressapp.payments.utils.Utils.validatePhoneNumber;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -46,7 +48,7 @@ public class RegisterEmployeesFragment extends Fragment {
                 }
             }else {
                 if (email.contains("@autocare.com")) {
-                    boolean registerEmployee = db.registerEmployee(name, email, phone, password);
+                    boolean registerEmployee = db.registerEmployee(name, email, validatePhoneNumber(phone), password);
                     if (registerEmployee) {
                         Snackbar.make(requireView(), "Employee successfully registered!", Snackbar.LENGTH_SHORT).show();
                         NavController navController = Navigation.findNavController(v);

@@ -1,5 +1,7 @@
 package daniel.brian.xpressapp.customer.appointments;
 
+import static daniel.brian.xpressapp.payments.utils.Utils.validatePhoneNumber;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -47,7 +49,7 @@ public class BrakesFragment extends Fragment {
             if(service.isEmpty() || branch.isEmpty() || firstname.isEmpty() || phone.isEmpty() || time.isEmpty() || date.isEmpty() || carReg.isEmpty() || carModel.isEmpty()){
                 Snackbar.make(requireView(),"Please Enter all fields",Snackbar.LENGTH_SHORT).show();
             }else{
-                boolean appointments = db.bookAppointment(service,branch,firstname,phone,time,date,carReg,carModel);
+                boolean appointments = db.bookAppointment(service,branch,firstname,validatePhoneNumber(phone),time,date,carReg,carModel);
                 if(appointments){
                     Snackbar.make(requireView(),"Appointment successfully booked!",Snackbar.LENGTH_SHORT).show();
                     NavController navController = Navigation.findNavController(v);
