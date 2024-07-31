@@ -49,6 +49,11 @@ public class CompletedTasksDB extends SQLiteOpenHelper {
         return db.rawQuery("select * from completedTasks",null);
     }
 
+    public Cursor filterByNameOrService(String name, String service){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("select * from completedTasks where employee = ? or service = ?",new String[]{name,service});
+    }
+
     public int getAllBookingsCount() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT COUNT(*) FROM completedTasks", null);

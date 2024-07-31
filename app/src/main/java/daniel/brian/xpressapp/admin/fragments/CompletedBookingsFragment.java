@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -56,7 +57,7 @@ public class CompletedBookingsFragment extends Fragment {
     private void displayData() {
         Cursor cursor = db.getAllBookings();
         if(cursor.getCount() == 0){
-            Snackbar.make(requireView(),"No Bookings Available",Snackbar.LENGTH_SHORT).show();
+            Toast.makeText(this.getContext(),"No completed Bookings",Toast.LENGTH_SHORT).show();
         }else{
             employee.clear();
             carReg.clear();

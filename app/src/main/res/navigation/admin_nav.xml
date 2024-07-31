@@ -43,7 +43,11 @@
         android:id="@+id/reportsFragment"
         android:name="daniel.brian.xpressapp.admin.fragments.ReportsFragment"
         android:label="fragment_reports"
-        tools:layout="@layout/fragment_reports" />
+        tools:layout="@layout/fragment_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
     <fragment
         android:id="@+id/taskAssignmentFragment"
         android:name="daniel.brian.xpressapp.admin.fragments.TaskAssignmentFragment"
@@ -59,4 +63,9 @@
         android:name="daniel.brian.xpressapp.admin.fragments.CustomerInvoiceFragment"
         android:label="fragment_customer_invoice"
         tools:layout="@layout/fragment_customer_invoice" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="daniel.brian.xpressapp.admin.fragments.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
 </navigation>

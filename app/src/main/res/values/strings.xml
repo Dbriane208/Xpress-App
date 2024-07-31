@@ -93,6 +93,8 @@
     <string name="confirmPayment">Confirm you entered the correct contact. Click Checkout if you\'re paying with Mpesa.</string>
     <string name="cash">Paid by Cash.</string>
     <string name="payO">Pay with Mpesa</string>
+    <string name="filter">Filter</string>
+    <string name="eName">Employee name</string>
 
     <string-array name="tyreServices">
         <item>Tyre Fitment - Passenger</item>
@@ -128,6 +130,32 @@
     </string-array>
 
     <string-array name="productServices">
+        <item>3D-point inspection</item>
+        <item>Electronic diagnosis</item>
+        <item>Spark plugs</item>
+        <item>Light Bulbs</item>
+        <item>Wipers</item>
+    </string-array>
+
+    <string-array name="allServices">
+        <item>Tyre Fitment - Passenger</item>
+        <item>Tyre Fitment - SUV</item>
+        <item>Tyre Fitment and Balancing</item>
+        <item>Tyre Fitment  and Alignment</item>
+        <item>Balancing only</item>
+        <item>Wheel Alignment - Passenger</item>
+        <item>Wheel Alignment - SUV</item>
+        <item>Tyre Rotation</item>
+        <item>Puncture Repair</item>
+        <item>Oil service - Minor</item>
+        <item>Oil service - Major</item>
+        <item>Spark plugs</item>
+        <item>Brake pads</item>
+        <item>Brake disks</item>
+        <item>Shock Absorbers and Alignment</item>
+        <item>Coil Springs and Alignment</item>
+        <item>Battery Replacement</item>
+        <item>Battery Check</item>
         <item>3D-point inspection</item>
         <item>Electronic diagnosis</item>
         <item>Spark plugs</item>
